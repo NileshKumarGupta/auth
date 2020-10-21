@@ -11,22 +11,31 @@
 </head>
 <body>
   Hello World!
-  <div class="g-signin2"></div>
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+
   <script>
-    console.log(document.querySelector(".g-signin2"));
-    document
-      .querySelector(".g-signin2")
-      .addEventListener("data-onsuccess", (googleUser) => {
-        console.log("Hello this function is working");
-        var profile = googleUser.getBasicProfile();
-        console.log("ID: " + profile.getId()); // Do not send to your backend! Use an ID token instead.
-        console.log("Name: " + profile.getName());
-        console.log("Image URL: " + profile.getImageUrl());
-        console.log("Email: " + profile.getEmail()); // This is null if the 'email' scope is not present.
-        console.log("id_token" + googleUser.getAuthResponse().id_token);
-      });
-    console.log("this script is running");
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyBGbCn0OJhyWZ6aqaz9lEC5D4FM4h3fCbs",
+      authDomain: "regtimetable-ad309.firebaseapp.com",
+      databaseURL: "https://regtimetable-ad309.firebaseio.com",
+      projectId: "regtimetable-ad309",
+      storageBucket: "regtimetable-ad309.appspot.com",
+      messagingSenderId: "105707632135",
+      appId: "1:105707632135:web:4c6516363961ac1ca05ca2",
+      measurementId: "G-ZL3RRVS0CF"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
   </script>
+  <script src='./auth.js'></script>
 </body>
 </html>
