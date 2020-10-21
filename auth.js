@@ -1,4 +1,7 @@
-const provider = new firebase.auth.GoogleAuthProvider();
+//const provider = new firebase.auth.GoogleAuthProvider();
+// Initialize the FirebaseUI Widget using Firebase.
+const ui = new firebaseui.auth.AuthUI(firebase.auth());
+
 firebase.auth().signInWithRedirect(provider);
 
 console.log("This script is executing");

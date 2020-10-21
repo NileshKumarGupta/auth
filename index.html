@@ -9,13 +9,18 @@
     content="1076065190118-6t13asfenlco65dda5ti5mb87l2v4tg8.apps.googleusercontent.com"
   />
   -->
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
   <title>Document</title>
 </head>
 <body>
   Hello World!
 
+  <div id='firebaseui-auth-container'></div>
+
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
 
   <!-- TODO: Add SDKs for Firebase products that you want to use
       https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -36,8 +41,8 @@
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
+    // firebase.analytics();
   </script>
-  <script src='./auth.js'></script>
+  <script src='./ui.js'></script>
 </body>
 </html>
